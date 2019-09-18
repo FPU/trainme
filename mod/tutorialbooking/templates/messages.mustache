@@ -1,0 +1,63 @@
+{{!
+    This file is part of the Tutorial Booking activity.
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template mod_tutorialbooking/messages
+
+    Tutorial booking message.
+
+    Used to render list of messages sent by the an instance of the plugin
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * none
+
+    Context variables required for this template:
+    * messages Array of objects containing name/value pairs
+    * strings Array of name/value pairs
+
+    Example context (json):
+    {
+        "messages": [
+            {
+                "subject": "Message 1",
+                "date": "1st Jan 2017",
+                "sentby": ["User 1"],
+                "sentto": ["User 2", "User 3"],
+                "message": "This is a message to notify you about stuff."
+            }
+        ],
+        "strings": [
+            "subject": "Subject",
+            "date": "Date",
+            "sentby": "From",
+            "sentto": "To"
+        ]
+    }
+}}
+<ul class="tutorialbooking">
+    {{#messages}}
+    <li class="message clearfix">
+        <div class="messageheader"><div class="description">{{strings.subject}}</div><div class="text">{{{subject}}}</div></div>
+        <div class="messageheader"><div class="description">{{strings.date}}</div><div class="text">{{{date}}}</div></div>
+        <div class="messageheader"><div class="description">{{strings.sentby}}</div><div class="text">{{#sentby}}<span class="user">{{.}}</span>{{/sentby}}</div></div>
+        <div class="messageheader"><div class="description">{{strings.sentto}}</div><div class="text">{{#sentto}}<span class="user">{{.}}</span>{{/sentto}}</div></div>
+        <div class="messagebody">{{{message}}}</div>
+    </li>
+    {{/messages}}
+</ul>

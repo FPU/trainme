@@ -1,0 +1,57 @@
+ul.tutorialbooking {
+    margin: 0;
+}
+
+ul.tutorialbooking li.message {
+    list-style: none;
+    margin: 0 0 0.6em 0;
+    padding: 0;
+    border-bottom: 0.2em solid #eee;
+}
+
+ul.tutorialbooking li.message .messageheader .description {
+    display: inline-block;
+    width: 25%;
+    font-weight: bold;
+}
+
+ul.tutorialbooking li.message .messageheader .text {
+    display: inline-block;
+    width: 75%;
+}
+
+ul.tutorialbooking li.message .messagebody {
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
+}
+
+.path-mod-tutorialbooking .tutorial {
+    border-bottom: 0.2em solid #eee;
+}
+
+.path-mod-tutorialbooking .tutorial_session {
+    margin: 0 1em;
+    border-bottom: 0.2em solid #eee;
+}
+
+.path-mod-tutorialbooking .tutorial_session .controls,
+.path-mod-tutorialbooking .tutorial .controls {
+    margin-bottom: 0.6em;
+}
+
+.path-mod-tutorialbooking .tutorial_session .session_attendees {
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+
+.path-mod-tutorialbooking .messageheader .user::before {
+    content: ", ";
+}
+
+.path-mod-tutorialbooking .messageheader .user:first-child::before {
+    content: "";
+}
+
+.path-mod-tutorialbooking .signedupuser .icon {
+    margin-right: 0;
+}
